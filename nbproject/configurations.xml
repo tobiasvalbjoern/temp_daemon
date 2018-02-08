@@ -12,12 +12,12 @@
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
                    projectFiles="true">
-      <itemPath>LM35_handler.c</itemPath>
+      <itemPath>LM35_handler.cpp</itemPath>
       <itemPath>LM35_handler.h</itemPath>
       <itemPath>daemon.c</itemPath>
       <itemPath>daemon.h</itemPath>
       <itemPath>main.cpp</itemPath>
-      <itemPath>tserver.c</itemPath>
+      <itemPath>tserver.cpp</itemPath>
       <itemPath>tserver.h</itemPath>
     </logicalFolder>
     <logicalFolder name="TestFiles"
@@ -36,21 +36,18 @@
   <confs>
     <conf name="Debug" type="1">
       <toolsSet>
-        <compilerSet>default</compilerSet>
+        <compilerSet>GNU|GNU</compilerSet>
         <dependencyChecking>true</dependencyChecking>
         <rebuildPropChanged>false</rebuildPropChanged>
       </toolsSet>
       <compileType>
-        <ccTool>
-          <standard>11</standard>
-        </ccTool>
         <linkerTool>
           <linkerLibItems>
             <linkerLibStdlibItem>PosixThreads</linkerLibStdlibItem>
           </linkerLibItems>
         </linkerTool>
       </compileType>
-      <item path="LM35_handler.c" ex="false" tool="0" flavor2="0">
+      <item path="LM35_handler.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="LM35_handler.h" ex="false" tool="3" flavor2="0">
       </item>
@@ -60,7 +57,7 @@
       </item>
       <item path="main.cpp" ex="false" tool="1" flavor2="0">
       </item>
-      <item path="tserver.c" ex="false" tool="0" flavor2="0">
+      <item path="tserver.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="tserver.h" ex="false" tool="3" flavor2="0">
       </item>
@@ -86,7 +83,7 @@
           <developmentMode>5</developmentMode>
         </asmTool>
       </compileType>
-      <item path="LM35_handler.c" ex="false" tool="0" flavor2="0">
+      <item path="LM35_handler.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="LM35_handler.h" ex="false" tool="3" flavor2="0">
       </item>
@@ -96,7 +93,7 @@
       </item>
       <item path="main.cpp" ex="false" tool="1" flavor2="0">
       </item>
-      <item path="tserver.c" ex="false" tool="0" flavor2="0">
+      <item path="tserver.cpp" ex="false" tool="0" flavor2="0">
       </item>
       <item path="tserver.h" ex="false" tool="3" flavor2="0">
       </item>

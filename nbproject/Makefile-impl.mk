@@ -24,7 +24,7 @@ CLEAN_SUBPROJECTS=${CLEAN_SUBPROJECTS_${SUBPROJECTS}}
 
 
 # Project Name
-PROJECTNAME=ISD_project_2
+PROJECTNAME=temp_daemon
 
 # Active Configuration
 DEFAULTCONF=Debug

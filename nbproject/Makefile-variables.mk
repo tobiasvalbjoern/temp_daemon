@@ -9,19 +9,19 @@ CND_DISTDIR=dist
 # Debug configuration
 CND_PLATFORM_Debug=GNU-Linux
 CND_ARTIFACT_DIR_Debug=dist/Debug/GNU-Linux
-CND_ARTIFACT_NAME_Debug=isd_project_2
-CND_ARTIFACT_PATH_Debug=dist/Debug/GNU-Linux/isd_project_2
+CND_ARTIFACT_NAME_Debug=temp_daemon
+CND_ARTIFACT_PATH_Debug=dist/Debug/GNU-Linux/temp_daemon
 CND_PACKAGE_DIR_Debug=dist/Debug/GNU-Linux/package
-CND_PACKAGE_NAME_Debug=isdproject2.tar
-CND_PACKAGE_PATH_Debug=dist/Debug/GNU-Linux/package/isdproject2.tar
+CND_PACKAGE_NAME_Debug=tempdaemon.tar
+CND_PACKAGE_PATH_Debug=dist/Debug/GNU-Linux/package/tempdaemon.tar
 # Release configuration
 CND_PLATFORM_Release=GNU-Linux
 CND_ARTIFACT_DIR_Release=dist/Release/GNU-Linux
-CND_ARTIFACT_NAME_Release=isd_project_2
-CND_ARTIFACT_PATH_Release=dist/Release/GNU-Linux/isd_project_2
+CND_ARTIFACT_NAME_Release=temp_daemon
+CND_ARTIFACT_PATH_Release=dist/Release/GNU-Linux/temp_daemon
 CND_PACKAGE_DIR_Release=dist/Release/GNU-Linux/package
-CND_PACKAGE_NAME_Release=isdproject2.tar
-CND_PACKAGE_PATH_Release=dist/Release/GNU-Linux/package/isdproject2.tar
+CND_PACKAGE_NAME_Release=tempdaemon.tar
+CND_PACKAGE_PATH_Release=dist/Release/GNU-Linux/package/tempdaemon.tar
 #
 # include compiler specific variables
 #

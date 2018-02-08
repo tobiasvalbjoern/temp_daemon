@@ -15,14 +15,7 @@
 #ifndef TSERVER_H_
 #define TSERVER_H_
 
-#ifdef __cplusplus
-extern "C" {
-#endif
-    
 void tserver_init(char * interface, char * listen_port);
 
-#ifdef __cplusplus
-}
-#endif
 
 #endif /* TSERVER_H_ */
