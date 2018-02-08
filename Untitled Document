@@ -1,0 +1,15 @@
+Program uses port 1955 Close with kill -SIGHUP
+
+OBS TCP/IP stack keeps port busy for sometime even after close() - socket will stay in TIME_WAIT and TIME_WAIT2 state.
+
+usually it takes 2 minutes so if you need to use the same port immediately set SO_REUSEADDR option on your socket before binding
+
+setsockopt(_sockfd, SOL_SOCKET, SO_REUSEADDR, (char*)&iSetOption, sizeof(iSetOption))
+
+But note that technically, using SO_REUSEADDR violates the TCP/IP protocol, making it possible (though unlikely) for the next program that binds that port to pick up packets intended for the original program
+
+Ressource: https://stackoverflow.com/questions/548879/releasing-bound-ports-on-process-exit
+
+Denne kommando kan løbende følge aktiviteten fra programmet: sudo tail -f /var/log/syslog | grep temp_daemon
+
+Denne komande er god til generelt at slutte programmet: kill -SIGHUP pidof temp_daemon
