@@ -14,8 +14,8 @@
 #ifndef GET_TEMP_H
 #define GET_TEMP_H
 
-    float get_temp(void);
-    void set_alarm_sec(unsigned int t_seconds);
+    float LM35_handler_get_temp(void);
+    void LM35_handler_init(unsigned int t_seconds);
 
 #endif /* GET_TEMP_H */
 

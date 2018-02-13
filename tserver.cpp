@@ -237,7 +237,7 @@ void * connection_handling(void * new_fd) {
 		}
                 
                 if(strncmp (buf_in,"GET TEMP",8) == 0){
-                float x=get_temp();
+                float x=LM35_handler_get_temp();
                 memset(buf_in, 0x00, strlen(buf_in));
                 snprintf(buf_in, BUFSIZE,
                         "Received temperature: %.1f\n", x);

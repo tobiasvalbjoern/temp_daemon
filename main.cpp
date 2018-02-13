@@ -25,10 +25,10 @@ int main(int argc, char* argv[]) {
 	daemon_init("temp_daemon");
 	tserver_init("localhost", PORT);
         //A timer function that will create a signal interrupt every 15 sec
-        set_alarm_sec(15);
+        LM35_handler_init(15);
 	while (1) {
 		sleep(1);
-		printf("logging..\n");
+		//syslog(LOG_INFO, "Logging...\n");
 	}
 
 	daemon_stop(0);
