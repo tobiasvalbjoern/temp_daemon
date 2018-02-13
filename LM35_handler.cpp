@@ -18,8 +18,8 @@ using namespace std;
 #define LDR_PATH "/sys/bus/iio/devices/iio:device0/in_voltage"
 
 
-volatile sig_atomic_t T;
-
+//volatile sig_atomic_t T;
+volatile float T;
 int read_analog(int number){ // returns the input as an int
    stringstream ss;
    ss << LDR_PATH << number << "_raw";
@@ -47,7 +47,7 @@ void catch_alarm (int t_sig)
     syslog(LOG_INFO, "Temperature read = %.1f", T);
 }
 
-unsigned int set_alarm_sec (unsigned int t_seconds)
+void set_alarm_sec (unsigned int t_seconds)
 {
   if (signal(SIGALRM, catch_alarm) == SIG_ERR) {
 		syslog(LOG_ERR,"Can't catch %d",SIGALRM);
@@ -60,13 +60,14 @@ unsigned int set_alarm_sec (unsigned int t_seconds)
   timer.it_interval.tv_usec = 0;
   
   //The timer counts down from this value initially before starting.
-  timer.it_value.tv_sec = (long int) t_seconds;
-  timer.it_value.tv_usec = 0;
+  timer.it_value.tv_sec = 0;
+  //This needs to have a value besides zero.
+  timer.it_value.tv_usec = 1000;
   
   if (setitimer (ITIMER_REAL, &timer, NULL) < 0){
       syslog(LOG_NOTICE, "Could not install timer\n");
-      return 0;
+      return;
   }
   else
-    return NULL;
+    return;
 }

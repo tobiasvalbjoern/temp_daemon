@@ -15,7 +15,7 @@
 #define GET_TEMP_H
 
     float get_temp(void);
-    unsigned int set_alarm_sec(unsigned int t_seconds);
+    void set_alarm_sec(unsigned int t_seconds);
 
 #endif /* GET_TEMP_H */
 
