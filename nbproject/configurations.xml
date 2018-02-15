@@ -4,6 +4,7 @@
     <logicalFolder name="HeaderFiles"
                    displayName="Header Files"
                    projectFiles="true">
+      <itemPath>stringtrim.h</itemPath>
     </logicalFolder>
     <logicalFolder name="ResourceFiles"
                    displayName="Resource Files"
@@ -57,6 +58,8 @@
       </item>
       <item path="main.cpp" ex="false" tool="1" flavor2="0">
       </item>
+      <item path="stringtrim.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="tserver.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="tserver.h" ex="false" tool="3" flavor2="0">
@@ -92,6 +95,8 @@
       <item path="daemon.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="main.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="stringtrim.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="tserver.cpp" ex="false" tool="0" flavor2="0">
       </item>

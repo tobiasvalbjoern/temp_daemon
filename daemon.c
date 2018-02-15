@@ -22,16 +22,16 @@
 
 
 //Sig handler for termination of program
-
 void sig_handler(int t_signo) {
 	if (t_signo == SIGHUP) {
-		syslog(LOG_INFO, "Received %d. Aborting.", SIGHUP);
-		daemon_stop(0);
+            syslog(LOG_INFO, "Received %d. Aborting.", SIGHUP);
+            daemon_stop(0);
 	}
 }
 
 
 /**
+ * Start a process as a UNIX daemon
  * Turn this process into a daemon and detach stdin, stdout and stderr
  * Starts a syslog session with the given process name
  * Set up to terminate when receiving sighup.
@@ -71,19 +71,22 @@ void daemon_init(char *t_process_name) {
         
 	// Change the current working directory to root.
 	chdir("/");
-
+/**
 	// Close stdin. stdout and stderr
 	close(STDIN_FILENO);
 	close(STDOUT_FILENO);
 	close(STDERR_FILENO);
-
+*/
 	syslog(LOG_INFO, "STDIN, STDOUT, and STDERR closed.");
 
 	if (signal(SIGHUP, sig_handler) == SIG_ERR) {
-		syslog(LOG_ERR,"Can't catch %d",SIGHUP);
+		syslog(LOG_ERR,"Error catching %d",SIGHUP);
 	}
 } 
 
+/**
+ * Stop a UNIX style daemon previously started with "daemon_init"
+ */
 void daemon_stop(unsigned int t_exit_code) {
 	syslog(LOG_INFO, "Stopping daemon");
 	syslog(LOG_INFO, "Exit code: %u", t_exit_code);
