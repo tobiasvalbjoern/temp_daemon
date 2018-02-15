@@ -135,7 +135,7 @@ void tserver_init(char * interface, char *port) {
 	//connection_handling = start routine
 	// (void*) argument for our start routine, you can send one as a
 	//void pointer.
-	int rc = pthread_create(&threads, &attr, listen_thread, NULL);
+	int rc = pthread_create(&threads, &attr, listen_    thread, NULL);
 	if (rc) {
 		syslog(LOG_ERR, "Couldn't create listen thread");
 		exit(-1);
