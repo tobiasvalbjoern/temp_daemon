@@ -15,7 +15,6 @@
 #ifndef TSERVER_H_
 #define TSERVER_H_
 
-void tserver_init(char * interface, char * listen_port);
-
+void tserver_init(char * interface, char *port, std::string(*handler)(std::string));
 
 #endif /* TSERVER_H_ */

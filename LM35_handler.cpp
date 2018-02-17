@@ -13,34 +13,52 @@
 #include<string>
 #include<sstream>
 #include<stdlib.h>
+
 using namespace std;
 
-#define LDR_PATH "/sys/bus/iio/devices/iio:device0/in_voltage"
+#define ABSOLUTE_ZERO -273.15f;
+#define ADC_PATH "/sys/bus/iio/devices/iio:device0/in_voltage"
 
 pthread_mutex_t lock;
 
-volatile float T;
+volatile float T = ABSOLUTE_ZERO;
 
+/**
+ * Read an ADC pin from a beaglebone black
+ * @param number ADC pin to read 
+ * @return ADC numeric value 10 bit. On error -1
+ */
 int read_analog(int number) { // returns the input as an int
     stringstream ss;
-    ss << LDR_PATH << number << "_raw";
+    ss << ADC_PATH << number << "_raw";
     fstream fs;
     fs.open(ss.str().c_str(), fstream::in);
-    fs >> number;
-    fs.close();
+    if(fs.is_open()) {
+        fs >> number;
+        fs.close();
+    } else {
+        number =  -1; 
+    }
     return number;
 }
 
 float read_temp(void) {
-
-    float cur_voltage = read_analog(0) * (1.80f / 4096.0f);
-    return (100 * cur_voltage);
-
+    int analog_value = read_analog(0);
+    
+    if(analog_value > 0) {
+        float cur_voltage = read_analog(0) * (1.80f / 4096.0f);
+        return (100 * cur_voltage);
+    } else {
+        syslog(LOG_WARNING, "Could not read ADC. Faking value");
+        return rand() % 50; //Return a random temperature
+    }
 }
 
-// The signal handler reads the temp and re-enables itself
-//when receiving interrupt from alarm function every 15 sec
-
+/**
+ * Alarm handler. Catches periodic alarm and performs an ADC conversion
+ * Thread safe.
+ * @param t_sig
+ */
 void catch_alarm(int t_sig) {
     float t = read_temp();
     //try to lock. Returns 0 when succesfulll
@@ -48,27 +66,40 @@ void catch_alarm(int t_sig) {
         T = t;
     }
 
-    //the lock is only for adjusting the queue.
+    //the lock is only for adjusting the static value.
     pthread_mutex_unlock(&lock);
 
 
     syslog(LOG_INFO, "Temperature read = %.1f", T);
 }
 
+
+/**
+ * Read the last recorded temperature from the LM35 sensor
+ * 
+ * Call LM35_handler_init before using this routine!
+ * 
+ * @return Temperature in celcius
+ */
 float LM35_handler_get_temp(void) {
     float t;
-    //try to lock. Returns 0 when succesfulll
-    if (pthread_mutex_lock(&lock) == 0) {
-        t = T;
-    }
-
-    //the lock is only for adjusting the queue.
-    pthread_mutex_unlock(&lock);
-
-
-    return t;
+-    //try to lock. Returns 0 when succesfulll
+-    if (pthread_mutex_lock(&lock) == 0) {
+-        t = T;
+-    }
+-
+-    //the lock is only for adjusting the queue.
+-    pthread_mutex_unlock(&lock);
 }
 
+/**
+ * Configure the LM35 temperature sensor
+ * 
+ * This functions configures reading of temperature from an LM35 sensor
+ * connected to an analog pin. The value is updated periodically using the linux
+ * SIGALARM feature.
+ * @param t_seconds Update interval in seconds
+ */
 void LM35_handler_init(unsigned int t_seconds) {
     if (signal(SIGALRM, catch_alarm) == SIG_ERR) {
         syslog(LOG_ERR, "Can't catch %d", SIGALRM);
@@ -90,7 +121,5 @@ void LM35_handler_init(unsigned int t_seconds) {
 
     if (setitimer(ITIMER_REAL, &timer, NULL) < 0) {
         syslog(LOG_NOTICE, "Could not install timer\n");
-        return;
-    } else
-        return;
+    }
 }

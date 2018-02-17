@@ -11,11 +11,11 @@
  * Created on February 6, 2018, 11:08 AM
  */
 
-#ifndef GET_TEMP_H
-#define GET_TEMP_H
+#ifndef LM35_HANDLER_H
+#define LM35_HANDLER_H
 
     float LM35_handler_get_temp(void);
     void LM35_handler_init(unsigned int t_seconds);
 
-#endif /* GET_TEMP_H */
+#endif /* LM35_HANDLER_H */
 
