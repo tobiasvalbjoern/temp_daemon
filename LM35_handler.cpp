@@ -82,7 +82,14 @@ void catch_alarm(int t_sig) {
  * @return Temperature in celcius
  */
 float LM35_handler_get_temp(void) {
-    return T;
+    float t;
+-    //try to lock. Returns 0 when succesfulll
+-    if (pthread_mutex_lock(&lock) == 0) {
+-        t = T;
+-    }
+-
+-    //the lock is only for adjusting the queue.
+-    pthread_mutex_unlock(&lock);
 }
 
 /**
