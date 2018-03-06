@@ -30,6 +30,7 @@ string cmd_handler(string input) {
     string output("");
     
     if(input == string("GET TEMP")) {
+        
         float t = LM35_handler_get_temp();
         cout << t << endl;
         output = "REPLY TEMP: " + to_string(t) + "\n";
