@@ -43,6 +43,7 @@ int read_analog(int number) { // returns the input as an int
 }
 
 float read_temp(void) {
+    //read from analog0 on pin 39
     int analog_value = read_analog(0);
     
     if(analog_value > 0) {
@@ -100,6 +101,28 @@ float LM35_handler_get_temp(void) {
  * SIGALARM feature.
  * @param t_seconds Update interval in seconds
  */
+
+/**
+ * Helper write function that writes a single string value to a file in the path provided
+ * @param path The sysfs path of the file to be modified
+ * @param filename The file to be written to in that path
+ * @param value The value to be written to the file
+ * @return
+ */
+int write(string path, string filename, string value){
+   ofstream fs;
+   fs.open((path + filename).c_str());
+   if (!fs.is_open()){
+	   perror("GPIO: write failed to open file ");
+           printf("Path: %s Value: %s\n",(path + filename).c_str(), value.c_str());
+	   return -1;
+   }
+   fs << value;
+   fs.close();
+   return 0;
+}
+
+
 void LM35_handler_init(unsigned int t_seconds) {
     if (signal(SIGALRM, catch_alarm) == SIG_ERR) {
         syslog(LOG_ERR, "Can't catch %d", SIGALRM);
@@ -122,4 +145,14 @@ void LM35_handler_init(unsigned int t_seconds) {
     if (setitimer(ITIMER_REAL, &timer, NULL) < 0) {
         syslog(LOG_NOTICE, "Could not install timer\n");
     }
+    
+    system("config-pin p8.41 out");
+    //P8.20 as GPIO/output
+    write("/sys/class/gpio/gpio20/", "direction", "out"); 
+}
+
+void LM35_handler_set_heat(bool state){
+//Turn on GPIO_20 on pin 41
+    
+    
 }

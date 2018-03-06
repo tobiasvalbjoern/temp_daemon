@@ -16,6 +16,7 @@
 
     float LM35_handler_get_temp(void);
     void LM35_handler_init(unsigned int t_seconds);
+    void LM35_handler_set_heat(bool state);
 
 #endif /* LM35_HANDLER_H */
 
