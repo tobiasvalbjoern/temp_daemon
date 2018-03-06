@@ -43,7 +43,8 @@ string cmd_handler(string input) {
 
 int main(int argc, char* argv[]) {
 	daemon_init("temp_daemon"); //Start as daemon
-	tserver_init("localhost", PORT, cmd_handler); //Starts a new threaded server
+	//0.0.0.0 - Listening on all interfaces
+        tserver_init("0.0.0.0", PORT, cmd_handler); //Starts a new threaded server
         
         //Initialize the LM35 temperature sensor (Update interval = 15 secs)
         LM35_handler_init(15);
