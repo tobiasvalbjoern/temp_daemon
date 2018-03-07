@@ -30,14 +30,15 @@ string cmd_handler(string input) {
     string output("");
 
     if (input == string("GET TEMP")) {
-
         float t = LM35_handler_get_temp();
         cout << t << endl;
         output = "REPLY TEMP: " + to_string(t) + "\n";
     }
     else if (input == string("HEAT ON")) {
+        cout << "Turning on" << endl;
         LM35_handler_set_heat(true);
     } else if (input == string("HEAT OFF")) {
+        cout << "Turning off" << endl;
         LM35_handler_set_heat(false);
     } else {
         output = "Unknown command\n";

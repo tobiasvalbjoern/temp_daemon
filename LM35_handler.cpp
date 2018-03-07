@@ -152,7 +152,11 @@ void LM35_handler_init(unsigned int t_seconds) {
 }
 
 void LM35_handler_set_heat(bool state){
-    
     //Turn on GPIO_20 on pin 41.
-write("/sys/class/gpio/gpio20/", "direction", state ? "1" : "0");   
+    if(state) {
+        write("/sys/class/gpio/gpio20/", "value", "1");   
+    } else {
+        write("/sys/class/gpio/gpio20/", "value", "0");   
+    }
+
 }
