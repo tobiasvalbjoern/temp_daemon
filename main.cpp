@@ -21,44 +21,42 @@
 #include "tserver.h"
 #include "LM35_handler.h"
 
+#define INTERFACE "0.0.0.0" //0.0.0.0 - Listening on all interfaces
 #define PORT "1955" 
 
 using namespace std;
 
 string cmd_handler(string input) {
-    cout << "Handler got: #" << input << "#" << endl;
     string output("");
 
     if (input == string("GET TEMP")) {
         float t = LM35_handler_get_temp();
-        cout << t << endl;
         output = "REPLY TEMP: " + to_string(t) + "\n";
     }
     else if (input == string("HEAT ON")) {
-        cout << "Turning on" << endl;
+        syslog(LOG_INFO, "Turning on heat...");
         LM35_handler_set_heat(true);
     } else if (input == string("HEAT OFF")) {
-        cout << "Turning off" << endl;
+        syslog(LOG_INFO, "Turning off");
         LM35_handler_set_heat(false);
     } else {
+        syslog(LOG_WARNING, "Unknown command")
         output = "Unknown command\n";
     }
-
 
     return output;
 }
 
 int main(int argc, char* argv[]) {
     daemon_init("temp_daemon"); //Start as daemon
-    //0.0.0.0 - Listening on all interfaces
-    tserver_init("0.0.0.0", PORT, cmd_handler); //Starts a new threaded server
+    tserver_init(INTERFACE, PORT, cmd_handler); //Starts a new threaded server
 
     //Initialize the LM35 temperature sensor (Update interval = 15 secs)
     LM35_handler_init(1);
 
     while (1) { //Here you can implement some main logic...
         sleep(1);
-        //syslog(LOG_INFO, "Logging...\n");
+        //syslog(LOG_INFO, "Logging...");
     }
 
     daemon_stop(EXIT_SUCCESS); // Stop the daemon
