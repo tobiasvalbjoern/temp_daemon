@@ -43,6 +43,11 @@ int read_analog(int number) { // returns the input as an int
     return number;
 }
 
+/**
+ * Get temperature. Conversion from analog value to temperature
+ * @param void 
+ * @return temperature as float
+ */
 float read_temp(void) {
     //read from analog0 on pin 39
     int analog_value = read_analog(0);
@@ -95,15 +100,6 @@ float LM35_handler_get_temp(void) {
 }
 
 /**
- * Configure the LM35 temperature sensor
- * 
- * This functions configures reading of temperature from an LM35 sensor
- * connected to an analog pin. The value is updated periodically using the linux
- * SIGALARM feature.
- * @param t_seconds Update interval in seconds
- */
-
-/**
  * Helper write function that writes a single string value to a file in the path provided
  * @param path The sysfs path of the file to be modified
  * @param filename The file to be written to in that path
@@ -122,7 +118,14 @@ int write(string path, string filename, string value){
    return 0;
 }
 
-
+/**
+ * Configure the LM35 temperature sensor
+ * 
+ * This functions configures reading of temperature from an LM35 sensor
+ * connected to an analog pin. The value is updated periodically using the linux
+ * SIGALARM feature.
+ * @param t_seconds Update interval in seconds
+ */
 void LM35_handler_init(unsigned int t_seconds) {
     if (signal(SIGALRM, catch_alarm) == SIG_ERR) {
         syslog(LOG_ERR, "Can't catch %d", SIGALRM);
@@ -151,6 +154,11 @@ void LM35_handler_init(unsigned int t_seconds) {
     write("/sys/class/gpio/gpio20/", "direction", "out"); 
 }
 
+/**
+ * Turns on/off the heating based on commands from linux-host.
+ * @param bool state. True is when heating should be turned on. False for off.
+ * @return void
+ */
 void LM35_handler_set_heat(bool state){
     //Turn on GPIO_20 on pin 41.
     if(state) {

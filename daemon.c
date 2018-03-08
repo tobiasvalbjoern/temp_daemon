@@ -29,7 +29,6 @@ void sig_handler(int t_signo) {
 	}
 }
 
-
 /**
  * Start a process as a UNIX daemon
  * Turn this process into a daemon and detach stdin, stdout and stderr

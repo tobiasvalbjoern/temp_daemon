@@ -51,7 +51,7 @@ int main(int argc, char* argv[]) {
     daemon_init("temp_daemon"); //Start as daemon
     tserver_init(INTERFACE, PORT, cmd_handler); //Starts a new threaded server
 
-    //Initialize the LM35 temperature sensor (Update interval = 15 secs)
+    //Initialize the LM35 temperature sensor (Update interval = 1 secs)
     LM35_handler_init(1);
 
     while (1) { //Here you can implement some main logic...
