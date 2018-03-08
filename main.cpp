@@ -40,7 +40,7 @@ string cmd_handler(string input) {
         syslog(LOG_INFO, "Turning off");
         LM35_handler_set_heat(false);
     } else {
-        syslog(LOG_WARNING, "Unknown command")
+        syslog(LOG_WARNING, "Unknown command");
         output = "Unknown command\n";
     }
 

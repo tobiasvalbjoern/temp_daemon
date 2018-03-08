@@ -13,7 +13,7 @@
 #include<string>
 #include<sstream>
 #include<stdlib.h>
-#include<syslog>
+#include<syslog.h>
 
 using namespace std;
 
@@ -114,7 +114,7 @@ int write(string path, string filename, string value){
    ofstream fs;
    fs.open((path + filename).c_str());
    if (!fs.is_open()){
-	   syslog(LOG_ERROR, "GPIO: write failed to open file ");
+	   syslog(LOG_ERR, "GPIO: write failed to open file ");
            return -1;
    }
    fs << value;
