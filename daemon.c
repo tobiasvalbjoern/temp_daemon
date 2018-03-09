@@ -70,12 +70,12 @@ void daemon_init(char *t_process_name) {
         
 	// Change the current working directory to root.
 	chdir("/");
-/**
+
 	// Close stdin. stdout and stderr
 	close(STDIN_FILENO);
 	close(STDOUT_FILENO);
 	close(STDERR_FILENO);
-*/
+
 	syslog(LOG_INFO, "STDIN, STDOUT, and STDERR closed.");
 
 	if (signal(SIGHUP, sig_handler) == SIG_ERR) {
