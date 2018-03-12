@@ -37,6 +37,7 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 OBJECTFILES= \
 	${OBJECTDIR}/LM35_handler.o \
 	${OBJECTDIR}/daemon.o \
+	${OBJECTDIR}/jsonrpc.o \
 	${OBJECTDIR}/main.o \
 	${OBJECTDIR}/tserver.o
 
@@ -74,6 +75,11 @@ ${OBJECTDIR}/daemon.o: daemon.c
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.c) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/daemon.o daemon.c
+
+${OBJECTDIR}/jsonrpc.o: jsonrpc.cpp
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/jsonrpc.o jsonrpc.cpp
 
 ${OBJECTDIR}/main.o: main.cpp
 	${MKDIR} -p ${OBJECTDIR}

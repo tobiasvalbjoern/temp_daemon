@@ -20,11 +20,13 @@
 #include "daemon.h"
 #include "tserver.h"
 #include "LM35_handler.h"
+#include "jsonrpc.h"
 
 #define INTERFACE "0.0.0.0" //0.0.0.0 - Listening on all interfaces
 #define PORT "1955" 
 
 using namespace std;
+
 
 string cmd_handler(string input) {
     string output("");
@@ -48,6 +50,16 @@ string cmd_handler(string input) {
 }
 
 int main(int argc, char* argv[]) {
+    char json[] = "{\"jsonrcp\": \"2.0\", \"method\": \"getTemp\", \"params\": [], \"id\": \"1\"}";
+    char json_array[] = "{\"jsonrcp\": \"2.0\", \"method\": \"getTemp\", \"params\": [3,4], \"id\": \"1\"}";
+    char json_object[] = "{\"jsonrcp\": \"2.0\", \"method\": \"getTemp\", \"params\": {\"unit\": \"c\"}, \"id\": \"1\"}";
+    char json_noid[] = "{\"jsonrcp\": \"2.0\", \"method\": \"getTemp\", \"params\": {\"unit\": \"c\"}}";
+
+    jsonrpc_debug(json);
+    jsonrpc_debug(json_array);
+    jsonrpc_debug(json_object);
+    jsonrpc_debug(json_noid);    
+    
     daemon_init("temp_daemon"); //Start as daemon
     tserver_init(INTERFACE, PORT, cmd_handler); //Starts a new threaded server
 
