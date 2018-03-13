@@ -48,8 +48,6 @@ string cmd_handler(string input) {
     return output;
 }
 
-
-
 int main(int argc, char* argv[]) {
     char json[] = "{\"jsonrcp\": \"2.0\", \"method\": \"getTemp\", \"params\": [], \"id\": \"1\"}";
     char json_array[] = "{\"jsonrcp\": \"2.0\", \"method\": \"getTemp\", \"params\": [3,4], \"id\": \"1\"}";

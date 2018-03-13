@@ -7,6 +7,8 @@ using namespace std;
 
 int jsonrpc_debug(char * jsonrpc) {
     StaticJsonBuffer<500> jsonBuffer;
+    //Allocates and populate a JsonObject called root from a JSON string.
+    //returns a reference to the new JsonObject
     JsonObject& root = jsonBuffer.parseObject(jsonrpc);
 
     string jsonrpc_version = root["jsonrpc"];
@@ -14,7 +16,9 @@ int jsonrpc_debug(char * jsonrpc) {
     JsonVariant params = root["params"];
     long id = root["id"];
 
-
+    //Tells if the array is valid, which can be used:
+    //to check if the array was successfully parsed, or
+    //to check if the array was successfully allocated.
     if (!root.success()) {
         cout << "Not a valid JSON object" << endl;
         return -1;
@@ -35,6 +39,7 @@ int jsonrpc_debug(char * jsonrpc) {
     }
 
     cout << "Method: " << method << endl;
+    //tests if params is JsonArray
     if (params.is<JsonArray>()) {
         cout << "Parameter Array" << endl;
         int i = 0;
