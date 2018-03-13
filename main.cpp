@@ -62,6 +62,8 @@ int main(int argc, char* argv[]) {
     jsonrpc_debug(json_noid);    
     
     daemon_init("temp_daemon", true); //Start as daemon with debugging enabled
+    
+    //Request - {"jsonrcp": "2.0", "method": "getTemp", "id": "1"} 
     tserver_init(INTERFACE, PORT, jsonrpc_handler); //Starts a new threaded server
 
     //Initialize the LM35 temperature sensor (Update interval = 1 secs)
