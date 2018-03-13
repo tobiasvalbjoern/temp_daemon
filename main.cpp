@@ -49,10 +49,10 @@ string cmd_handler(string input) {
 }
 
 int main(int argc, char* argv[]) {
-    char json[] = "{\"jsonrcp\": \"2.0\", \"method\": \"getTemp\", \"params\": [], \"id\": \"1\"}";
-    char json_array[] = "{\"jsonrcp\": \"2.0\", \"method\": \"getTemp\", \"params\": [3,4], \"id\": \"1\"}";
-    char json_object[] = "{\"jsonrcp\": \"2.0\", \"method\": \"getTemp\", \"params\": {\"unit\": \"c\"}, \"id\": \"1\"}";
-    char json_noid[] = "{\"jsonrcp\": \"2.0\", \"method\": \"getTemp\", \"params\": {\"unit\": \"c\"}}";
+    char json[] = "{\"jsonrpc\": \"2.0\", \"method\": \"getTemp\", \"params\": [], \"id\": \"1\"}";
+    char json_array[] = "{\"jsonrpc\": \"2.0\", \"method\": \"getTemp\", \"params\": [3,4], \"id\": \"1\"}";
+    char json_object[] = "{\"jsonrpc\": \"2.0\", \"method\": \"getTemp\", \"params\": {\"unit\": \"c\"}, \"id\": \"1\"}";
+    char json_noid[] = "{\"jsonrpc\": \"2.0\", \"method\": \"getTemp\", \"params\": {\"unit\": \"c\"}}";
 
     jsonrpc_debug(json);
     jsonrpc_debug(json_array);
