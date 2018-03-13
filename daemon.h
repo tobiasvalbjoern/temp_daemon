@@ -17,7 +17,7 @@
 extern "C" {
 #endif
 
-void daemon_init(char *process_name);
+void daemon_init(char *process_name, int debug);
 void daemon_stop(unsigned int exit_code);
 
 #ifdef __cplusplus

@@ -36,11 +36,13 @@ void sig_handler(int t_signo) {
  * Set up to terminate when receiving sighup.
  * Set up for signal handling for timer to read temperature at 15 sec.  
  */
-void daemon_init(char *t_process_name) {
+void daemon_init(char *t_process_name, int debug) {
 	pid_t process_id = 0;
 	pid_t sid = 0;
         
 	openlog(t_process_name, 0, LOG_USER);
+        if(debug) 
+            return;
         
 	// Create child process
 	process_id = fork();

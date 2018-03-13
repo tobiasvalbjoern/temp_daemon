@@ -34,8 +34,7 @@ string cmd_handler(string input) {
     if (input == string("GET TEMP")) {
         float t = LM35_handler_get_temp();
         output = "REPLY TEMP: " + to_string(t) + "\n";
-    }
-    else if (input == string("HEAT ON")) {
+    } else if (input == string("HEAT ON")) {
         syslog(LOG_INFO, "Turning on heat...");
         LM35_handler_set_heat(true);
     } else if (input == string("HEAT OFF")) {
@@ -49,6 +48,8 @@ string cmd_handler(string input) {
     return output;
 }
 
+
+
 int main(int argc, char* argv[]) {
     char json[] = "{\"jsonrcp\": \"2.0\", \"method\": \"getTemp\", \"params\": [], \"id\": \"1\"}";
     char json_array[] = "{\"jsonrcp\": \"2.0\", \"method\": \"getTemp\", \"params\": [3,4], \"id\": \"1\"}";
@@ -60,8 +61,8 @@ int main(int argc, char* argv[]) {
     jsonrpc_debug(json_object);
     jsonrpc_debug(json_noid);    
     
-    daemon_init("temp_daemon"); //Start as daemon
-    tserver_init(INTERFACE, PORT, cmd_handler); //Starts a new threaded server
+    daemon_init("temp_daemon", true); //Start as daemon with debugging enabled
+    tserver_init(INTERFACE, PORT, jsonrpc_handler); //Starts a new threaded server
 
     //Initialize the LM35 temperature sensor (Update interval = 1 secs)
     LM35_handler_init(1);

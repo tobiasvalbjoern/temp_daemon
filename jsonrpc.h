@@ -14,7 +14,11 @@
 #ifndef JSONRPC_H
 #define JSONRPC_H
 
+#include <iostream>
+using namespace std;
 int jsonrpc_debug(char * jsonrpc);
+string jsonrpc_handler(string jsonrpc);
+
 
 #endif /* JSONRPC_H */
 
