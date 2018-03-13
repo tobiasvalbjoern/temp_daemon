@@ -6,7 +6,7 @@
 using namespace std;
 
 int jsonrpc_debug(char * jsonrpc) {
-    StaticJsonBuffer<500> jsonBuffer;
+    DynamicJsonBuffer jsonBuffer;
     //Allocates and populate a JsonObject called root from a JSON string.
     //returns a reference to the new JsonObject
     JsonObject& root = jsonBuffer.parseObject(jsonrpc);
