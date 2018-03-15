@@ -1,4 +1,4 @@
-#Thu Mar 15 11:20:22 CET 2018
+#Thu Mar 15 11:25:02 CET 2018
 c\:\\users\\jct\\documents\\aau\\e4\\isd-sw\\projects\\temp_daemon\\.git\\objects\\ab\\25a5936c0ba1ba373a4fa14624b4fc15a503da=c1520892016178
 /home/tobias/NetBeansProjects/temp_daemon/.git/objects/pack/pack-d896cd1322b1f7ad73e8d54f11553f337082304b.pack=c1518896862000
 /home/tobias/NetBeansProjects/temp_daemon/ArduinoJson/ArduinoJson/Serialization/JsonSerializer.hpp=c1520959457000
@@ -26,6 +26,7 @@ c\:\\users\\jct\\documents\\aau\\e4\\isd-sw\\projects\\temp_daemon\\.git\\object
 c\:\\users\\jct\\documents\\aau\\e4\\isd-sw\\projects\\temp_daemon\\.git\\objects\\pack\\pack-b60cd4568b858559445f03999c997f2312f3dd9e.idx=c1520427816513
 /home/tobias/NetBeansProjects/temp_daemon/stringtrim.h=c1520959457000
 c\:\\users\\jct\\documents\\aau\\e4\\isd-sw\\projects\\temp_daemon\\.git\\objects\\c4\\76b93d52f48da510e3cd262f02019ce35851ec=c1520433415850
+/home/tobias/NetBeansProjects/temp_daemon/.git/objects/58/4514ff7c0f74f8bd5113f417ba6be1ac0cfc8e=c1521109369000
 /home/tobias/NetBeansProjects/temp_daemon/ArduinoJson/ArduinoJson/Data/Encoding.hpp=c1520959457000
 c\:\\users\\jct\\documents\\aau\\e4\\isd-sw\\projects\\temp_daemon\\arduinojson\\arduinojson\\jsonvariantsubscripts.hpp=c1520884783981
 c\:\\users\\jct\\documents\\aau\\e4\\isd-sw\\projects\\temp_daemon\\.git\\hooks\\pre-rebase.sample=c1520427224658
@@ -68,13 +69,14 @@ c\:\\users\\jct\\documents\\aau\\e4\\isd-sw\\projects\\temp_daemon\\.git\\object
 c\:\\users\\jct\\documents\\aau\\e4\\isd-sw\\projects\\temp_daemon\\rapidjson\\internal\\meta.h=c1520879823710
 c\:\\users\\jct\\documents\\aau\\e4\\isd-sw\\projects\\temp_daemon\\.git\\objects\\97\\6a7ff4bf23ce2c1bb70cd4219c591ff1c634dc=c1520892016028
 c\:\\users\\jct\\documents\\aau\\e4\\isd-sw\\projects\\temp_daemon\\arduinojson\\arduinojson\\serialization\\streamprintadapter.hpp=c1520884784040
-/home/tobias/NetBeansProjects/temp_daemon/.git/logs/refs/remotes/origin/master=c1520969604000
+/home/tobias/NetBeansProjects/temp_daemon/.git/logs/refs/remotes/origin/master=c1521109379000
 /home/tobias/NetBeansProjects/temp_daemon/ArduinoJson/ArduinoJson/JsonVariantBase.hpp=c1520959457000
 /home/tobias/NetBeansProjects/temp_daemon/.git/objects/2b/2587219996905049f47e9b4c0bb96fcbaccadd=c1520339042000
 /home/tobias/NetBeansProjects/temp_daemon/.git/objects/3d/9dc053896a83276ecda65f97b5b25865c81133=c1518098251000
 c\:\\users\\jct\\documents\\aau\\e4\\isd-sw\\projects\\temp_daemon\\rapidjson\\msinttypes\\inttypes.h=c1520879823743
 /home/tobias/NetBeansProjects/temp_daemon/ArduinoJson/ArduinoJson/JsonPair.hpp=c1520959457000
 /home/tobias/NetBeansProjects/temp_daemon/.git/objects/f6/be301484b748b8da75d4043c803f8a0d29395d=c1520969539000
+/home/tobias/NetBeansProjects/temp_daemon/.git/objects/d5/04c93a764d52dd0a939a73c1e4d9dbfc50f036=c1521109369000
 c\:\\users\\jct\\documents\\aau\\e4\\isd-sw\\projects\\temp_daemon\\rapidjson\\reader.h=c1520879823760
 /home/tobias/NetBeansProjects/temp_daemon/ArduinoJson/ArduinoJson/TypeTraits/IsSame.hpp=c1520959457000
 /home/tobias/NetBeansProjects/temp_daemon/.git/objects/3d/67c8145a3a8e16e3ead8c005709213df8703d8=c1520337508000
@@ -84,6 +86,7 @@ c\:\\users\\jct\\documents\\aau\\e4\\isd-sw\\projects\\temp_daemon\\rapidjson\\p
 c\:\\users\\jct\\documents\\aau\\e4\\isd-sw\\projects\\temp_daemon\\arduinojson\\arduinojson\\deserialization\\jsonparser.hpp=c1520884783929
 /home/tobias/NetBeansProjects/temp_daemon/.git/objects/bc/e5643ddc9d80f0d6d1fb845e546f7bfbe1f9d0=c1518096351000
 c\:\\users\\jct\\documents\\aau\\e4\\isd-sw\\projects\\temp_daemon\\activity_diagram.graphml=c1520507875181
+/home/tobias/NetBeansProjects/temp_daemon/.git/objects/e3/bd8049dd9508a1bd0c93b0573deb284859d0ae=c1521109369000
 /home/tobias/NetBeansProjects/temp_daemon/.git/objects/50/55237812c9246888b9299a4962f23719e2406e=c1520332524000
 /home/tobias/NetBeansProjects/temp_daemon/.git/COMMIT_EDITMSG=c1520332524000
 c\:\\users\\jct\\documents\\aau\\e4\\isd-sw\\projects\\temp_daemon\\arduinojson\\arduinojson\\jsonvariantimpl.hpp=c1520884783977
@@ -110,7 +113,7 @@ c\:\\users\\jct\\documents\\aau\\e4\\isd-sw\\projects\\temp_daemon\\.git\\object
 /home/tobias/NetBeansProjects/temp_daemon/.git/objects/c9/d43281245c68a9a36de3a6c81c1bf1a32130c4=c1518098251000
 c\:\\users\\jct\\documents\\aau\\e4\\isd-sw\\projects\\temp_daemon\\arduinojson\\arduinojson\\data\\valuesaver.hpp=c1520884783923
 /home/tobias/NetBeansProjects/temp_daemon/ArduinoJson/ArduinoJson/TypeTraits/IsIntegral.hpp=c1520959457000
-/home/tobias/NetBeansProjects/temp_daemon/.git/index=c1520969590000
+/home/tobias/NetBeansProjects/temp_daemon/.git/index=c1521109369000
 /home/tobias/NetBeansProjects/temp_daemon/temp_daemon.dia=c1520959457000
 /home/tobias/NetBeansProjects/temp_daemon/.git/objects/38/ba445ca7af10238108abee7d53f99326ec49fb=c1518096351000
 /home/tobias/NetBeansProjects/temp_daemon/.git/objects/c0/7771a24f40a135daff8e0dd6542d20d5163c8b=c1520339014000
@@ -167,7 +170,7 @@ c\:\\users\\jct\\documents\\aau\\e4\\isd-sw\\projects\\temp_daemon\\.git\\object
 c\:\\users\\jct\\documents\\aau\\e4\\isd-sw\\projects\\temp_daemon\\stringtrim.h=c1520427233736
 c\:\\users\\jct\\documents\\aau\\e4\\isd-sw\\projects\\temp_daemon\\arduinojson\\arduinojson\\data\\noncopyable.hpp=c1520884783919
 c\:\\users\\jct\\documents\\aau\\e4\\isd-sw\\projects\\temp_daemon\\.git\\objects\\e1\\18e6d092792d701d0cbf7ac434eea60e5f64bb=c1520936456258
-/home/tobias/NetBeansProjects/temp_daemon/.git/logs/refs/heads/master=c1520969590000
+/home/tobias/NetBeansProjects/temp_daemon/.git/logs/refs/heads/master=c1521109369000
 /home/tobias/NetBeansProjects/temp_daemon/.git/objects/b0/cae35211fdfd81411c52dd0b2f3b762152c774=c1518098251000
 /home/tobias/NetBeansProjects/temp_daemon/activity_diagram.graphml=c1520959457000
 c\:\\users\\jct\\documents\\aau\\e4\\isd-sw\\projects\\temp_daemon\\nbproject\\makefile-release.mk=c1520427233609
@@ -199,11 +202,12 @@ c\:\\users\\jct\\documents\\aau\\e4\\isd-sw\\projects\\temp_daemon\\arduinojson\
 /home/tobias/NetBeansProjects/temp_daemon/.git/objects/22/e2725a3f74f3b636aed51d7967a93cbcde607b=c1518898014000
 /home/tobias/NetBeansProjects/temp_daemon/.git/objects/pack/pack-d896cd1322b1f7ad73e8d54f11553f337082304b.idx=c1518896862000
 /home/tobias/NetBeansProjects/temp_daemon/.git/objects/fa/842aa1a3ef3218ce56a05ece3d6b8f13a9f8bc=c1518898014000
+/home/tobias/NetBeansProjects/temp_daemon/.git/objects/f3/d6549d836622181a9d050a803b132fb753c32b=c1521109369000
 c\:\\users\\jct\\documents\\aau\\e4\\isd-sw\\projects\\temp_daemon\\arduinojson\\arduinojson\\jsonbuffer.hpp=c1520884783946
 /home/tobias/NetBeansProjects/temp_daemon/.git/objects/f1/8e3a5fd90a62dbac4ae3714bd5d65295faa88e=c1518898014000
 c\:\\users\\jct\\documents\\aau\\e4\\isd-sw\\projects\\temp_daemon\\.git\\objects\\e6\\8bb653fed31b16fbac7b7495e2f90820d595f5=c1520892015717
 /home/tobias/NetBeansProjects/temp_daemon/.git/objects/72/62bb15a4e7e028829f04a16ae89e4582fcf6bf=c1520337528000
-/home/tobias/NetBeansProjects/temp_daemon/.git/refs/remotes/origin/master=c1520969604000
+/home/tobias/NetBeansProjects/temp_daemon/.git/refs/remotes/origin/master=c1521109379000
 /home/tobias/NetBeansProjects/temp_daemon/ArduinoJson/ArduinoJson.h=c1520959457000
 /home/tobias/NetBeansProjects/temp_daemon/.git/objects/cd/efc96a6ee0578d17efdcb89dcd365d39bdc35b=c1518096351000
 c\:\\users\\jct\\documents\\aau\\e4\\isd-sw\\projects\\temp_daemon\\rapidjson\\internal\\stack.h=c1520879823720
@@ -241,6 +245,7 @@ c\:\\users\\jct\\documents\\aau\\e4\\isd-sw\\projects\\temp_daemon\\.git\\object
 c\:\\users\\jct\\documents\\aau\\e4\\isd-sw\\projects\\temp_daemon\\arduinojson\\arduinojson\\data\\listiterator.hpp=c1520884783914
 c\:\\users\\jct\\documents\\aau\\e4\\isd-sw\\projects\\temp_daemon\\.git\\objects\\pack\\pack-b60cd4568b858559445f03999c997f2312f3dd9e.pack=c1520427816503
 c\:\\users\\jct\\documents\\aau\\e4\\isd-sw\\projects\\temp_daemon\\.git\\objects\\f5\\abf500739c19a86cafb6bdd22ec4e72313d9bb=c1520892015661
+/home/tobias/NetBeansProjects/temp_daemon/.git/objects/50/196d8a38f40e653ff1ab0cefc19be561a52823=c1521109369000
 /home/tobias/NetBeansProjects/temp_daemon/.git/objects/9c/57f6c128dcb9be8037f87fa8294fb55bba14f5=c1518096351000
 /home/tobias/NetBeansProjects/temp_daemon/.git/objects/0c/f8f08139569cae80f7612a937998938e46ef3a=c1520339042000
 c\:\\users\\jct\\documents\\aau\\e4\\isd-sw\\projects\\temp_daemon\\rapidjson\\internal\\swap.h=c1520879823731
@@ -254,7 +259,7 @@ c\:\\users\\jct\\documents\\aau\\e4\\isd-sw\\projects\\temp_daemon\\.git\\object
 c\:\\users\\jct\\documents\\aau\\e4\\isd-sw\\projects\\temp_daemon\\.git\\objects\\94\\96e9d5e95a80b846f85025259338035183397a=c1520892016086
 c\:\\users\\jct\\documents\\aau\\e4\\isd-sw\\projects\\temp_daemon\\.git\\objects\\2e\\e189de143bd9a51d5d43d236074ff02893853d=c1520496328944
 /home/tobias/NetBeansProjects/temp_daemon/.git/objects/be/4b1d5a19030d1b063a902e4594d366469ce4d6=c1520332284000
-/home/tobias/NetBeansProjects/temp_daemon/.git/logs/HEAD=c1520969590000
+/home/tobias/NetBeansProjects/temp_daemon/.git/logs/HEAD=c1521109369000
 /home/tobias/NetBeansProjects/temp_daemon/.git/objects/f1/94ff1e06092197c8365f4071c9d10d9e3ad166=c1520333017000
 c\:\\users\\jct\\documents\\aau\\e4\\isd-sw\\projects\\temp_daemon\\.git\\objects\\0c\\3942725d855d5f88f22393834ba6f0d70cbf30=c1520892016201
 c\:\\users\\jct\\documents\\aau\\e4\\isd-sw\\projects\\temp_daemon\\.git\\objects\\06\\3dd7f1b44782ab996a3115b00ceca5a0f87177=c1520892016160
@@ -263,6 +268,8 @@ c\:\\users\\jct\\documents\\aau\\e4\\isd-sw\\projects\\temp_daemon\\.git\\logs\\
 /home/tobias/NetBeansProjects/temp_daemon/ArduinoJson/ArduinoJson/Data/JsonInteger.hpp=c1520959457000
 c\:\\users\\jct\\documents\\aau\\e4\\isd-sw\\projects\\temp_daemon\\.git\\objects\\59\\b94644446f28d94331d530f1ae1ca57900c9f1=c1520892016780
 /home/tobias/NetBeansProjects/temp_daemon/.git/objects/a3/a420eae502575d531d98fce809f510556bc777=c1518517152000
+/home/tobias/NetBeansProjects/temp_daemon/.git/objects/cc/159b715a77bd50c29a8df88f61b38bc50100e4=c1521109369000
+/home/tobias/NetBeansProjects/temp_daemon/.git/objects/3d/3bd22200d77a01ae68bfee99b3741534ce6226=c1521109369000
 /home/tobias/NetBeansProjects/temp_daemon/.git/objects/a3/36d4d9812083956fd7df3410a5e2bf48a3a04b=c1518707084000
 /home/tobias/NetBeansProjects/temp_daemon/.git/objects/08/56c487ddb8f00633121d55b3eed9dfbd131361=c1518517152000
 c\:\\users\\jct\\documents\\aau\\e4\\isd-sw\\projects\\temp_daemon\\arduinojson\\arduinojson\\jsonvariant.hpp=c1520884783965
@@ -335,6 +342,7 @@ c\:\\users\\jct\\documents\\aau\\e4\\isd-sw\\projects\\temp_daemon\\.git\\object
 /home/tobias/NetBeansProjects/temp_daemon/.git/objects/73/c6d947e8984c8225907ecbf0ebc0ec84fbdd2e=c1520969590000
 c\:\\users\\jct\\documents\\aau\\e4\\isd-sw\\projects\\temp_daemon\\.git\\objects\\a0\\c6e7e32978fcebbe12bf20948c0e056533570f=c1520892016564
 c\:\\users\\jct\\documents\\aau\\e4\\isd-sw\\projects\\temp_daemon\\arduinojson\\arduinojson\\typetraits\\issame.hpp=c1520884784105
+/home/tobias/NetBeansProjects/temp_daemon/.git/objects/e6/1280e57c13470c53066bda64b0aa1af4c0cb79=c1521109369000
 c\:\\users\\jct\\documents\\aau\\e4\\isd-sw\\projects\\temp_daemon\\.git\\objects\\96\\dd7680ce4df512ffd21b04b4951ccc77421bd8=c1520892016573
 /home/tobias/NetBeansProjects/temp_daemon/.git/objects/47/bd49971ca240bdea5b1a736464e4501fc500e2=c1518898014000
 /home/tobias/NetBeansProjects/temp_daemon/.git/objects/74/49d65b5166ec36139b9ad5b638a22e59a51881=c1520969539000
@@ -353,6 +361,7 @@ c\:\\users\\jct\\documents\\aau\\e4\\isd-sw\\projects\\temp_daemon\\.git\\object
 /home/tobias/NetBeansProjects/temp_daemon/LM35_handler.cpp=c1520959457000
 /home/tobias/NetBeansProjects/temp_daemon/ArduinoJson/ArduinoJson/TypeTraits/RemoveReference.hpp=c1520959457000
 /home/tobias/NetBeansProjects/temp_daemon/.git/objects/6a/54cbb807ce584d755ee7671c56ef058f599266=c1518098251000
+/home/tobias/NetBeansProjects/temp_daemon/.git/objects/ad/970883ee55f678b637e5c5fb96dfa136eaecce=c1521109369000
 /home/tobias/NetBeansProjects/temp_daemon/ArduinoJson/ArduinoJson/Polyfills/isFloat.hpp=c1520959457000
 /home/tobias/NetBeansProjects/temp_daemon/.git/objects/98/b730fe253b000384423a83221fa5a9bfcd4bea=c1518098251000
 c\:\\users\\jct\\documents\\aau\\e4\\isd-sw\\projects\\temp_daemon\\.git\\objects\\39\\bb805f5f260623cf8402aa6ddc17ba26b7d5b3=c1520444118574
@@ -418,7 +427,7 @@ c\:\\users\\jct\\documents\\aau\\e4\\isd-sw\\projects\\temp_daemon\\.git\\commit
 /home/tobias/NetBeansProjects/temp_daemon/ArduinoJson/ArduinoJson/JsonVariantCasts.hpp=c1520959457000
 /home/tobias/NetBeansProjects/temp_daemon/ArduinoJson/ArduinoJson/Polyfills/isInteger.hpp=c1520959457000
 /home/tobias/NetBeansProjects/temp_daemon/.git/refs/tags/exercise4=c1520959457000
-/home/tobias/NetBeansProjects/temp_daemon/main.cpp=c1521106464000
+/home/tobias/NetBeansProjects/temp_daemon/main.cpp=c1521109449000
 c\:\\users\\jct\\documents\\aau\\e4\\isd-sw\\projects\\temp_daemon\\arduinojson\\arduinojson\\dynamicjsonbuffer.hpp=c1520884783937
 /home/tobias/NetBeansProjects/temp_daemon/.git/objects/c2/d196e3e966bfd29c83ce3f5bd41dec6a5b7890=c1518096351000
 c\:\\users\\jct\\documents\\aau\\e4\\isd-sw\\projects\\temp_daemon\\rapidjson\\cursorstreamwrapper.h=c1520879823468
@@ -534,7 +543,7 @@ c\:\\users\\jct\\documents\\aau\\e4\\isd-sw\\projects\\temp_daemon\\.git\\object
 /home/tobias/NetBeansProjects/temp_daemon/ArduinoJson/ArduinoJson/JsonBufferBase.hpp=c1520959457000
 c\:\\users\\jct\\documents\\aau\\e4\\isd-sw\\projects\\temp_daemon\\.git\\config=c1520879387253
 /home/tobias/NetBeansProjects/temp_daemon/ArduinoJson/ArduinoJson/JsonVariantComparisons.hpp=c1520959457000
-/home/tobias/NetBeansProjects/temp_daemon/.git/refs/heads/master=c1520969590000
+/home/tobias/NetBeansProjects/temp_daemon/.git/refs/heads/master=c1521109369000
 c\:\\users\\jct\\documents\\aau\\e4\\isd-sw\\projects\\temp_daemon\\.git\\objects\\d0\\8e73d668e798993a5cd85d06d8b8858a95be72=c1520892015851
 /home/tobias/NetBeansProjects/temp_daemon/ArduinoJson/ArduinoJson/Data/JsonVariantDefault.hpp=c1520959457000
 /home/tobias/NetBeansProjects/temp_daemon/.git/objects/75/c04dde792cdc7b1529d2f24e84a4749d1043a7=c1518096376000
