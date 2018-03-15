@@ -1,7 +1,9 @@
 #include "ArduinoJson/ArduinoJson.h"
 #include <iostream>
-
+#include <syslog.h>
 #include "LM35_handler.h"
+#include <string>
+#include <cstring>
 
 using namespace std;
 
@@ -54,13 +56,13 @@ int jsonrpc_debug(char * jsonrpc) {
         }
     }
 
-
     cout << "-------ENDJSONRPC-----------" << endl;
     return 0;
 }
 
 string jsonrpc_handler(string jsonrpc) {
-    cout << "Dump: ##" << jsonrpc << "##" << endl;
+    //For debugging purposes
+    //cout << "Dump: ##" << jsonrpc << "##" << endl;
     StaticJsonBuffer<500> jsonBuffer;
     JsonObject& root = jsonBuffer.parseObject(jsonrpc);
 
@@ -70,17 +72,21 @@ string jsonrpc_handler(string jsonrpc) {
     long id = root["id"];
 
     if (!root.success()) {
-        cout << "Not a valid JSON object" << endl;
+        //cout << "Not a valid JSON object" << endl;
+        syslog(LOG_INFO, "Not a valid JSON object, -32700\n");
         return "{\"jsonrpc\": \"2.0\", \"error\": {\"code\": -32700, \"message\": \"Parse error\"}, \"id\": null}\n";
     }
     
     if (jsonrpc_version != "2.0" || !method.length() ) {
-        cout << "Not a valid JSONRPC object" << endl;
+        //cout << "Not a valid JSONRPC object" << endl;
+        syslog(LOG_INFO, "Not a valid JSONRPC object, -32600\n");
         return "{\"jsonrpc\": \"2.0\", \"error\": {\"code\": -32600, \"message\": \"Invalid request\"}, \"id\": null}\n";
     }
     
     if(method == "getTemp") {
-        cout << "Temp was requested" << endl;
+        //For debugging purposes.
+        //cout << "Temp was requested" << endl;
+        syslog(LOG_INFO, "Temp was requested\n");
         root["result"] = LM35_handler_get_temp();
     } 
     

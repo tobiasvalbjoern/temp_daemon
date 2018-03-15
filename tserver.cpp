@@ -244,6 +244,7 @@ void * connection_handling(void * new_fd) {
                 //break out of the loop and test on the main while loop
                 break;
             }
+             syslog(LOG_INFO, "Sent %d bytes: %s", n, output.c_str());
         }
     }
     close(fd);

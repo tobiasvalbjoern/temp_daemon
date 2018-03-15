@@ -27,28 +27,8 @@
 
 using namespace std;
 
-
-string cmd_handler(string input) {
-    string output("");
-
-    if (input == string("GET TEMP")) {
-        float t = LM35_handler_get_temp();
-        output = "REPLY TEMP: " + to_string(t) + "\n";
-    } else if (input == string("HEAT ON")) {
-        syslog(LOG_INFO, "Turning on heat...");
-        LM35_handler_set_heat(true);
-    } else if (input == string("HEAT OFF")) {
-        syslog(LOG_INFO, "Turning off");
-        LM35_handler_set_heat(false);
-    } else {
-        syslog(LOG_WARNING, "Unknown command");
-        output = "Unknown command\n";
-    }
-
-    return output;
-}
-
 int main(int argc, char* argv[]) {
+    /*
     char json[] = "{\"jsonrpc\": \"2.0\", \"method\": \"getTemp\", \"params\": [], \"id\": \"1\"}";
     char json_array[] = "{\"jsonrpc\": \"2.0\", \"method\": \"getTemp\", \"params\": [3,4], \"id\": \"1\"}";
     char json_object[] = "{\"jsonrpc\": \"2.0\", \"method\": \"getTemp\", \"params\": {\"unit\": \"c\"}, \"id\": \"1\"}";
@@ -58,6 +38,7 @@ int main(int argc, char* argv[]) {
     jsonrpc_debug(json_array);
     jsonrpc_debug(json_object);
     jsonrpc_debug(json_noid);    
+    */
     
     daemon_init("temp_daemon", true); //Start as daemon with debugging enabled
     
